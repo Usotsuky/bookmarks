@@ -30,7 +30,8 @@ def user_login(request):
         form = LoginForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            user = authenticate(request, username=cd['username'], password=cd['password'])   # username and password takes from UserLogin from
+            user = authenticate(request, username=cd['username'], password=cd['password'])
+            # username and password takes from UserLogin from
             if user is not None:
                 if user.is_active:
                     login(request, user)
@@ -66,8 +67,7 @@ def edit(request):
         user_form = UserEditForm(instance=request.user)
         profile_form = ProfileEditForm(
                     instance=request.user.profile)
-        return render(request,
-            'account/edit.html',
-                {'user_form': user_form, 'profile_form': profile_form}
+        return render(request, 'account/edit.html', {'user_form': user_form, 'profile_form': profile_form}
                       )
-    # When you pass instance=request.user to the UserEditForm, it populates the form fields with the data from the user instance.
+    # When you pass instance=request.user to the UserEditForm,
+    # it populates the form fields with the data from the user instance.
