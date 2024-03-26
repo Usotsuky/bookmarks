@@ -3,3 +3,5 @@ Django
 pip-tools
 poetry
 python-dotenv
+django-extensions
+werkzeug

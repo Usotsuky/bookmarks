@@ -31,6 +31,10 @@ crashtest==0.4.1
 distlib==0.3.8
     # via virtualenv
 django==5.0.3
+    # via
+    #   -r requirements.in
+    #   django-extensions
+django-extensions==3.2.3
     # via -r requirements.in
 dulwich==0.21.7
     # via poetry
@@ -50,6 +54,8 @@ jaraco-classes==3.3.1
     # via keyring
 keyring==24.3.1
     # via poetry
+markupsafe==2.1.5
+    # via werkzeug
 more-itertools==10.2.0
     # via jaraco-classes
 msgpack==1.0.8
@@ -124,6 +130,8 @@ urllib3==2.2.1
     #   requests
 virtualenv==20.25.1
     # via poetry
+werkzeug==3.0.1
+    # via -r requirements.in
 wheel==0.42.0
     # via pip-tools
 zipp==3.17.0
